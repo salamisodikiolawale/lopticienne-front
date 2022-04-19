@@ -1,0 +1,12 @@
+.banniere{
+    // border: 1px solid gray;
+    // height: 300px;
+    height: var(--height);
+    border-radius: 10px;
+
+    img{
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+    }
+}
