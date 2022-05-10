@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '../shares/article.service';
 import { Article, Gender, TypeArticle } from '../shares/models/Article';
+import { GlobalComponentService } from '../shares/services/global-component.service';
 
 @Component({
   selector: 'app-lentilles',
@@ -9,8 +10,14 @@ import { Article, Gender, TypeArticle } from '../shares/models/Article';
 })
 export class LentillesComponent implements OnInit {
 
-  datas:Article[] = []
-  constructor(private articleService: ArticleService) { }
+  datas:Article[] = [];
+  public searchInput:string="";
+  public searchInputypeMonture:string="";
+
+  constructor(
+    private articleService: ArticleService, 
+    private globalService: GlobalComponentService,
+  ) { }
 
   ngOnInit(): void {
     this.articleService.getArticles().subscribe( (articles:Article[]) => {
@@ -20,8 +27,9 @@ export class LentillesComponent implements OnInit {
         }
       });
     })
-    // console.log("lentille", this.datas);
-    
+
+    this.globalService.currentApprovalStagePrice.subscribe(price => this.searchInput = price);
+    this.globalService.currentApprovalStageTypeMonture.subscribe(typeMonture => this.searchInputypeMonture = typeMonture);
   }
 
 }

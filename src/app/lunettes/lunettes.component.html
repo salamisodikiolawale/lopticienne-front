@@ -1,3 +1,4 @@
+
 <div class="card-grp">
-    <app-card *ngFor ="let data of datas" [data]="data"></app-card>
+    <app-card *ngFor ="let data of datas | search: searchInput : searchInputypeMonture" [data]="data"></app-card>
 </div>

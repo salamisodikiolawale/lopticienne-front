@@ -13,124 +13,62 @@
     </div>
 </div>
 
-<div class="options">
-    <mat-form-field appearance="fill" style="z-index: 0;">
+<div class="options-group">
+
+    
+    <mat-form-field appearance="fill" style="z-index: 0;" class="option">
         <mat-label>Prix</mat-label>
-        <mat-select disableRipple>
-          <mat-option value="1">1500</mat-option>
-          <mat-option value="2">1500</mat-option>
-          <mat-option value="3">1500</mat-option>
+        <mat-select disableRipple name="searchInput" [(ngModel)]="searchInput">
+            <!-- <mat-option value="">...</mat-option> -->
+            <mat-option value="670">670</mat-option>
+            <mat-option value="850">850</mat-option>
+            <mat-option value="1000">1000</mat-option>
         </mat-select>
     </mat-form-field>
 
-    <mat-form-field appearance="fill" style="z-index: 0;">
-        <mat-label>Prix</mat-label>
-        <mat-select disableRipple>
-          <mat-option value="1">1500</mat-option>
-          <mat-option value="2">1500</mat-option>
-          <mat-option value="3">1500</mat-option>
+     <mat-form-field appearance="fill" style="z-index: 0;">
+        <mat-label>Type de lunettes</mat-label>
+        <mat-select disableRipple name="searchInputTypeMonture" [(ngModel)]="searchInputTypeMonture">
+          <!-- <mat-option>...</mat-option> -->
+          <mat-option value="LUNETTE_DE_VUE">Lunettes de vues</mat-option>
+          <mat-option value="LUNETTE_DE_SOLEIL">Lunettes de soleil</mat-option>
+          <mat-option value="LENTILLE_DE_COULEUR">Lunettes de couleur</mat-option>
+          <mat-option value="LENTILLE_CORRECTRICE">Lentilles correctrices</mat-option>
+          <mat-option value="LENTILLE_JOURNALIERE">Lentilles journalière</mat-option>
         </mat-select>
     </mat-form-field>
 
-    <mat-form-field appearance="fill" style="z-index: 0;">
-        <mat-label>Prix</mat-label>
-        <mat-select disableRipple>
-          <mat-option value="1">1500</mat-option>
-          <mat-option value="2">1500</mat-option>
-          <mat-option value="3">1500</mat-option>
-        </mat-select>
-    </mat-form-field>
-
-
-    <mat-form-field appearance="fill" style="z-index: 0;">
-        <mat-label>Prix</mat-label>
-        <mat-select disableRipple>
-          <mat-option value="1">1500</mat-option>
-          <mat-option value="2">1500</mat-option>
-          <mat-option value="3">1500</mat-option>
+     <mat-form-field appearance="fill" style="z-index: 0;">
+        <mat-label>Type de visage</mat-label>
+        <mat-select disableRipple name="searchInputTypeMonture" [(ngModel)]="searchInputVisage">
+          <mat-option>...</mat-option>
+          <mat-option value="CAREE">Carre</mat-option>
+          <mat-option value="RECTANGLE">Rectangle</mat-option>
+          <mat-option value="TRIANGLE_POINTE_EN_BAS">Triange pointe en bas</mat-option>
+          <mat-option value="OVALE">Ovale</mat-option>
+          <mat-option value="TRIANGLE_POINTE_EN_HAUT">Triange pointe en haut</mat-option>
+          <mat-option value="ROND">Rond</mat-option>
         </mat-select>
     </mat-form-field>
     
-    <!-- <select name="pets" id="pet-select">
-        <option class="test" value="">Prix</option>
-        <option value="dog">1500</option>
-        <option value="dog">1500</option>
-        <option value="dog">1500</option>
-    </select>
+    <mat-form-field appearance="fill" style="z-index: 0;">
+        <mat-label>Genre</mat-label>
+        <mat-select disableRipple name="searchInputTypeMonture" [(ngModel)]="searchInputGenre">
+          <mat-option>...</mat-option>
+          <mat-option value="FEMME">Femme</mat-option>
+          <mat-option value="HOMME">Homme</mat-option>
+          <mat-option value="ENFANT">Enfant</mat-option>
+          <mat-option value="MIXTE">Mixte</mat-option>
+        </mat-select>
+    </mat-form-field>
 
-    <select name="pets" id="pet-select">
-        <option value="">Type de montures</option>
-        <option value="dog">Cerclée</option>
-        <option value="dog">Sémi-cerclée</option>
-        <option value="dog">Percée</option>
-    </select>
-
-    <select name="pets" id="pet-select">
-        <option value="">Mon visage</option>
-        <option value="dog">Crré</option>
-        <option value="dog">Rectangle</option>
-        <option value="dog">Triangle pointé en bas</option>
-        <option value="dog">Ovale</option>
-        <option value="dog">Triangle pointé en haut</option>
-        <option value="dog">Rond</option>
-    </select>
-
-    <select name="pets" id="pet-select">
-        <option value="">Genre</option>
-        <option value="dog">Femme</option>
-        <option value="dog">Homme</option>
-        <option value="dog">Enfant</option>
-        <option value="dog">Mixte</option>
-    </select>
-
-    <select name="pets" id="pet-select">
-        <option value="">Style</option>
-        <option value="dog">Classique</option>
-        <option value="dog">Vintage</option>
-        <option value="dog">Fashion</option>
-        <option value="dog">Urbain</option>
-        <option value="dog">Sport</option>
-        <option value="dog">Design</option>
-    </select>
-    
-    <select name="pets" id="pet-select">
-        <option value="">Marque</option>
-        <option value="dog">Baila</option>
-        <option value="dog">Avenger</option>
-        <option value="dog">Drew.S</option>
-    </select>
-
-    <select name="pets" id="pet-select">
-        <option value="">Forme</option>
-        <option value="dog">Rectangle</option>
-        <option value="dog">Ovale</option>
-        <option value="dog">Pantos</option>
-        <option value="dog">Papillon</option>
-        <option value="dog">Nylor</option>
-        <option value="dog">Wayfarer</option>
-        <option value="dog">Clubmaster</option>
-        <option value="dog">Ronde</option>
-        <option value="dog">Pilote/Aviator</option>
-    </select>
-
-    <select name="pets" id="pet-select">
-        <option value="">Matière</option>
-        <option value="dog">Plastique</option>
-        <option value="dog">Métal</option>
-        <option value="dog">Titane</option>
-        <option value="dog">Combiné</option>
-    </select>
-
-    <select name="pets" id="pet-select">
-        <option value="">Couleur montures</option>
-        <option value="dog">Noir</option>
-        <option value="dog">Violet</option>
-        <option value="dog">Rouge</option>
-        <option value="dog">Jaune</option>
-        <option value="dog">Marron</option>
-        <option value="dog">Verte</option>
-    </select> -->
-
-    
-
+    <mat-form-field appearance="fill" style="z-index: 0;">
+        <mat-label>Forme</mat-label>
+        <mat-select disableRipple name="searchInputTypeMonture" [(ngModel)]="searchInputTypeMonture">
+          <mat-option>...</mat-option>
+          <mat-option value="CERCLE">Cercle</mat-option>
+          <mat-option value="CARRE">Carre</mat-option>
+          <mat-option value="OVALE">Ovale</mat-option>
+        </mat-select>
+    </mat-form-field>
 </div>

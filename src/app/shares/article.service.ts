@@ -25,6 +25,8 @@ export class ArticleService {
   
   makesData:BehaviorSubject<any[]> = new BehaviorSubject<any[]>([{}]);
 
+  public prix:Observable<number> = new Observable();
+
   private urlArticles = "http://127.0.0.1:8080/api/articles";
 
   private urtlMakeArticle = "http://127.0.0.1:8080/api/make_articles";
@@ -40,6 +42,7 @@ export class ArticleService {
       const hydraMember = article_obj["hydra:member"];
       this.datas.next(hydraMember);
     })
+    
     return this.datas;
   }
 
